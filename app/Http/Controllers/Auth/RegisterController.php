@@ -3,6 +3,7 @@
 namespace Inventario\Http\Controllers\Auth;
 
 use Inventario\User;
+use Inventario\Role;
 use Inventario\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -28,7 +29,7 @@ class RegisterController extends Controller
      *
      * @var string
      */
-    protected $redirectTo = '/home';
+    protected $redirectTo = '/ropa';
 
     /**
      * Create a new controller instance.
@@ -59,7 +60,7 @@ class RegisterController extends Controller
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
-     * @return \Inventario\User
+     * @return \LaraDex\User
      */
     protected function create(array $data)
     {
@@ -73,3 +74,4 @@ class RegisterController extends Controller
         return $user;
     }
 }
+
